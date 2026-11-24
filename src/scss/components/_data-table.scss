@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.data-table {
+  font-variant-numeric: tabular-nums;
+
+  thead th {
+    --bs-table-bg: var(--bs-tertiary-bg);
+
+    position: sticky;
+    top: 0;
+    color: var(--bs-secondary-color);
+    font-size: rem(12px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    @include truncate;
+
+    max-width: rem(260px);
+  }
+}
